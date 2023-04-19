@@ -81,7 +81,7 @@ public class ExemploJComboBox extends JFrame {
     public static List<Curso> listarCursos() {
         List<Curso> cursos = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection("jdbc:sqlserver://192.168.1.111:1433;databaseName=calango;encrypt=false;", "sa", "Acesso123")) {
-            cursos = Curso.listarCursos(conn);
+        	//CursoDAO cursoDAO = new CursoDAO();
         } catch (SQLException e) {
             System.out.println("Erro ao buscar cursos: " + e.getMessage());
         }
